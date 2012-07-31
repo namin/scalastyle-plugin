@@ -77,7 +77,7 @@ object ScalastyleBuilder {
 class ScalastyleBuilder extends IncrementalProjectBuilder {
   private val categoryId = 999
 
-  def build(kind: Int, args: java.util.Map[_, _], monitor: IProgressMonitor): Array[IProject] = {
+  override def build(kind: Int, args: java.util.Map[String, String], monitor: IProgressMonitor): Array[IProject] = {
     // get the associated project for this builder
     val project = getProject();
 
